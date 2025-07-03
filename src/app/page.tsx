@@ -402,7 +402,7 @@ export default function SpeedTest() {
                   <div className="flex justify-center pt-2 sm:pt-4">
                     <a
                       href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                        `🚀 Just ran a Proof of Speed on https://proof-of-speed-et1k.vercel.app/ powered by Succinct SP1\n\n🔐 Speed Proof Hash:\n${proofResult.speed_proof}\n⚡ Verified Download Speed: ${proofResult.verified_result} Mbps\n\nScaling real-world verifiability — one proof at a time.\n\n#Succinct #SP1`,
+                        `🚀 Just ran a Proof of Speed on\n\nhttps://proof-of-speed-et1k.vercel.app/ powered by Succinct SP1\n\n🔐 Speed Proof Hash:\n${proofResult.speed_proof}\n⚡ Verified Download Speed: ${proofResult.verified_result} Mbps\n\nScaling real-world verifiability — one proof at a time.\n\n#Succinct #SP1 #Succinct #SP1 @RizzDroop23 @SuccinctLabs @0xCRASHOUT `,
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
