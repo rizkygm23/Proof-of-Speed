@@ -5,7 +5,21 @@ import { Progress } from "@/components/ui/progress"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Wifi, Download, Share, Copy, CheckCircle, Zap, Globe, Timer, Twitter, Shield, Gauge } from "lucide-react"
+import {
+  Wifi,
+  Download,
+  Share,
+  Copy,
+  CheckCircle,
+  Zap,
+  Globe,
+  Timer,
+  Twitter,
+  Shield,
+  Gauge,
+  MessageCircle,
+  Code,
+} from "lucide-react"
 
 // Responsive Speedometer Component
 const Speedometer = ({
@@ -187,7 +201,25 @@ export default function SpeedTest() {
   const speedStatus = getSpeedStatus()
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-pink-50 p-2 sm:p-4 lg:p-6">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-pink-50 p-2 sm:p-4 lg:p-6 relative">
+      {/* Corner Watermark */}
+      <div className="fixed top-4 right-4 z-50 hidden sm:block">
+        <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-lg px-3 py-2 shadow-lg">
+          <div className="flex items-center gap-2 text-xs text-gray-600">
+            <Code className="h-3 w-3 text-[#FE11C5]" />
+            <span className="font-medium">Built by</span>
+            <a
+              href="https://twitter.com/RizzDroop23"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#FE11C5] hover:text-pink-600 transition-colors font-medium"
+            >
+              @RizzDroop23
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8">
         {/* Header */}
         <div className="text-center space-y-2 sm:space-y-4 pt-4 sm:pt-6 lg:pt-8">
@@ -370,7 +402,7 @@ export default function SpeedTest() {
                   <div className="flex justify-center pt-2 sm:pt-4">
                     <a
                       href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                        `🚀 Just ran a Proof of Speed on proof.mysite.com powered by Succinct SP1\n\n🔐 Speed Proof Hash:\n${proofResult.speed_proof}\n⚡ Verified Download Speed: ${proofResult.verified_result} Mbps\n\nScaling real-world verifiability — one proof at a time.\n\n#Succinct #SP1`,
+                        `🚀 Just ran a Proof of Speed on https://proof-of-speed-et1k.vercel.app/ powered by Succinct SP1\n\n🔐 Speed Proof Hash:\n${proofResult.speed_proof}\n⚡ Verified Download Speed: ${proofResult.verified_result} Mbps\n\nScaling real-world verifiability — one proof at a time.\n\n#Succinct #SP1`,
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -419,6 +451,34 @@ export default function SpeedTest() {
               <div className="text-xs sm:text-sm text-gray-600">Share your verified results on social media</div>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Footer Watermark */}
+        <div className="border-t border-gray-200 pt-6 pb-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-2 text-sm text-gray-600">
+              <Code className="h-4 w-4 text-[#FE11C5]" />
+              <span>Crafted with ❤️ by</span>
+              <a
+                href="https://twitter.com/RizzDroop23"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-[#FE11C5] hover:text-pink-600 transition-colors font-medium"
+              >
+                <Twitter className="h-3 w-3" />
+                @RizzDroop23
+              </a>
+            </div>
+
+            <div className="flex items-center gap-4 text-sm text-gray-500">
+              <div className="flex items-center gap-1">
+                <MessageCircle className="h-3 w-3" />
+                <span>Discord:</span>
+                <span className="font-medium text-gray-700">rizzgm</span>
+              </div>
+              <div className="text-xs">© 2024 Speed Test App</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
