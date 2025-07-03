@@ -152,7 +152,7 @@ export default function SpeedTest() {
     }, 300)
 
     try {
-      const res = await fetch("http://95.111.225.16:3001/prove", {
+      const res = await fetch("/api/prove", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ speed_mbps: speed, prove: true }),

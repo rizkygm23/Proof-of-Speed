@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/prove",
+      "destination": "http://95.111.225.16:3001/prove"
+    }
+  ]
+}
