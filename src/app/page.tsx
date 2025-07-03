@@ -476,7 +476,7 @@ export default function SpeedTest() {
                 <span>Discord:</span>
                 <span className="font-medium text-gray-700">rizzgm</span>
               </div>
-              <div className="text-xs">© 2024 Speed Test App</div>
+              <div className="text-xs">© 2025 Speed Test App</div>
             </div>
           </div>
         </div>
